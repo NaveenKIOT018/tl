@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(130deg, rgb(0, 140, 255),lightblue, rgb(0, 140, 255));
+}
+
+.todolist{
+    height: 560px;
+    width: 450px;
+    text-align: center;
+    background-color: black;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.container{
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 10px;
+    max-height: 75%;
+    overflow: scroll;
+    padding: 10px;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+
+input{
+    height: 50px;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: larger;
+}
+
+.add{
+    height: 50px;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: large;
+    background-color:  rgb(255, 229, 113);
+}
+
+.h{
+    color: white;
+     margin-bottom: 18px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.h::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 4px;
+    background-color:  rgb(255, 229, 113);
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.h:hover::after{
+    transform: scaleX(1);
+}
+
+
+li{
+    height: 40px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    border: none;
+    outline: none;
+}
+
+li::-webkit-scrollbar{
+    display: none;
+}
+
+.deletebtn{
+    height: 45px;
+    max-width: 300px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: large;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.deletebtn:hover{
+    height: 45px;
+    max-width: 300px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: large;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px red,0 0 20px red;
+}
+
+.con{
+    width: 70%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    font-size: 20px;
+    display: inline;
+    height: 100%;
+    background-color:  rgb(252, 239, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.con::-webkit-scrollbar{
+    display: none;
+}
+
+.done{
+    height: 45px;
+    max-width: 300px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: large;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+.done:hover{
+    height: 45px;
+    max-width: 300px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: large;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px lightgreen,0 0 20px lightgreen;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+

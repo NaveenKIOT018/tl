@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="https://kit.fontawesome.com/a50910134f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="todolist" >
+        <h1 class="h">To do List</h1>
+        <div><input id="con"  type="text" placeholder="Update your list"> <button class="add" id="button">Add item</button></div>
+        <div class="container" id="listelement">
+            
+        </div>
+    </div>
+    
+    
+   
+    <script>
+        button.addEventListener("click",()=>{
+
+            if(con.value==""){
+                alert("Please Write Something")
+            }
+            else{
+                var liste = document.createElement("li")
+
+                var para = document.createElement("p")
+                para.textContent=con.value
+                para.classList.add("con")
+
+                var deletebtn = document.createElement("button")
+                deletebtn.innerHTML='<i class="fa-solid fa-circle-xmark fa-lg" style="color: #eb1000;"></i>'
+                deletebtn.classList.add("deletebtn")
+
+                deletebtn.addEventListener("click",()=>{
+                    liste.remove()
+                })
+
+                var done = document.createElement("button");
+                done.innerHTML = '<i class="fa-solid fa-circle-check fa-lg"style="color: #63E6BE;"></i>';
+                done.classList.add("done");
+
+                done.addEventListener("click",()=>{
+                    liste.classList.toggle("strike")
+                })
+
+                liste.append(done)
+                liste.append(para)
+                liste.append(deletebtn)
+                listelement.append(liste)
+                con.value=''
+            }
+            
+        })
+    </script>
+</body>
+</html>
+
